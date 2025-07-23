@@ -4,52 +4,39 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-
 const ContactSection = () => {
   const [terminalInput, setTerminalInput] = useState('');
-  const [terminalHistory, setTerminalHistory] = useState([
-    '> System initialized...',
-    '> Welcome to Spidey\'s Contact Terminal',
-    '> Type "help" for available commands',
-  ]);
-
-  const socialLinks = [
-    {
-      name: 'LinkedIn',
-      icon: Linkedin,
-      url: 'https://linkedin.com/in/goli-vignesh',
-      color: 'text-blue-400',
-      handle: '@goli-vignesh'
-    },
-    {
-      name: 'GitHub',
-      icon: Github,
-      url: 'https://github.com/vignesh-spidey',
-      color: 'text-gray-400',
-      handle: '@vignesh-spidey'
-    },
-    {
-      name: 'Instagram',
-      icon: Instagram,
-      url: 'https://instagram.com/vignesh_spidey',
-      color: 'text-pink-400',
-      handle: '@vignesh_spidey'
-    },
-    {
-      name: 'Email',
-      icon: Mail,
-      url: 'mailto:vignesh.goli@example.com',
-      color: 'text-green-400',
-      handle: 'vignesh.goli@example.com'
-    }
-  ];
-
+  const [terminalHistory, setTerminalHistory] = useState(['> System initialized...', '> Welcome to Spidey\'s Contact Terminal', '> Type "help" for available commands']);
+  const socialLinks = [{
+    name: 'LinkedIn',
+    icon: Linkedin,
+    url: 'https://linkedin.com/in/goli-vignesh',
+    color: 'text-blue-400',
+    handle: '@goli-vignesh'
+  }, {
+    name: 'GitHub',
+    icon: Github,
+    url: 'https://github.com/vignesh-spidey',
+    color: 'text-gray-400',
+    handle: '@vignesh-spidey'
+  }, {
+    name: 'Instagram',
+    icon: Instagram,
+    url: 'https://instagram.com/vignesh_spidey',
+    color: 'text-pink-400',
+    handle: '@vignesh_spidey'
+  }, {
+    name: 'Email',
+    icon: Mail,
+    url: 'mailto:vignesh.goli@example.com',
+    color: 'text-green-400',
+    handle: 'vignesh.goli@example.com'
+  }];
   const handleTerminalSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!terminalInput.trim()) return;
-
     const newHistory = [...terminalHistory, `> ${terminalInput}`];
-    
+
     // Simple command responses
     switch (terminalInput.toLowerCase().trim()) {
       case 'help':
@@ -74,13 +61,10 @@ const ContactSection = () => {
       default:
         newHistory.push(`Command "${terminalInput}" not found. Type "help" for available commands.`);
     }
-
     setTerminalHistory(newHistory);
     setTerminalInput('');
   };
-
-  return (
-    <section id="contact" className="py-20 relative overflow-hidden">
+  return <section id="contact" className="py-20 relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-orbitron font-bold mb-4">
@@ -88,9 +72,7 @@ const ContactSection = () => {
               Let's Connect!
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to collaborate, innovate, or just have a tech chat? Drop me a message!
-          </p>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Ready to collaborate, innovate, or just have a tech chat? Drop me a message!</p>
         </div>
 
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
@@ -105,27 +87,17 @@ const ContactSection = () => {
             </CardHeader>
             <CardContent>
               <div className="bg-cyber-dark rounded-lg p-4 font-mono text-sm h-64 overflow-y-auto mb-4">
-                {terminalHistory.map((line, index) => (
-                  <div key={index} className="text-green-400 mb-1">
+                {terminalHistory.map((line, index) => <div key={index} className="text-green-400 mb-1">
                     {line}
-                  </div>
-                ))}
+                  </div>)}
               </div>
               
               <form onSubmit={handleTerminalSubmit} className="flex gap-2">
                 <div className="flex-1 flex items-center bg-cyber-dark rounded-lg px-3">
                   <span className="text-green-400 font-mono mr-2">$</span>
-                  <Input
-                    value={terminalInput}
-                    onChange={(e) => setTerminalInput(e.target.value)}
-                    placeholder="Type a command..."
-                    className="bg-transparent border-none font-mono text-green-400 placeholder:text-green-400/50"
-                  />
+                  <Input value={terminalInput} onChange={e => setTerminalInput(e.target.value)} placeholder="Type a command..." className="bg-transparent border-none font-mono text-green-400 placeholder:text-green-400/50" />
                 </div>
-                <Button 
-                  type="submit"
-                  className="bg-gradient-cyber hover:opacity-80"
-                >
+                <Button type="submit" className="bg-gradient-cyber hover:opacity-80">
                   <Send size={16} />
                 </Button>
               </form>
@@ -142,24 +114,10 @@ const ContactSection = () => {
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="space-y-4">
-                <Input 
-                  placeholder="Your Name"
-                  className="glass border-primary/50 focus:border-primary"
-                />
-                <Input 
-                  type="email"
-                  placeholder="Your Email"
-                  className="glass border-primary/50 focus:border-primary"
-                />
-                <Input 
-                  placeholder="Subject"
-                  className="glass border-primary/50 focus:border-primary"
-                />
-                <Textarea 
-                  placeholder="Your Message"
-                  rows={5}
-                  className="glass border-primary/50 focus:border-primary resize-none"
-                />
+                <Input placeholder="Your Name" className="glass border-primary/50 focus:border-primary" />
+                <Input type="email" placeholder="Your Email" className="glass border-primary/50 focus:border-primary" />
+                <Input placeholder="Subject" className="glass border-primary/50 focus:border-primary" />
+                <Textarea placeholder="Your Message" rows={5} className="glass border-primary/50 focus:border-primary resize-none" />
               </div>
               
               <Button className="w-full bg-gradient-cyber hover:opacity-80 font-rajdhani font-semibold">
@@ -173,9 +131,7 @@ const ContactSection = () => {
         {/* Social Links */}
         <div className="mt-16">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-orbitron font-bold text-foreground mb-2">
-              Find Me Across the Web
-            </h3>
+            <h3 className="text-2xl font-orbitron font-bold text-foreground mb-2">Find Me Across the Web</h3>
             <div className="flex items-center justify-center gap-2 text-muted-foreground">
               <MapPin size={16} />
               <span>Hyderabad, Telangana, India</span>
@@ -183,13 +139,9 @@ const ContactSection = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {socialLinks.map((social, index) => (
-              <Card 
-                key={social.name}
-                className="group glass cyber-border hover:scale-105 transition-all duration-300 cursor-pointer"
-                onClick={() => window.open(social.url, '_blank')}
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
+            {socialLinks.map((social, index) => <Card key={social.name} className="group glass cyber-border hover:scale-105 transition-all duration-300 cursor-pointer" onClick={() => window.open(social.url, '_blank')} style={{
+            animationDelay: `${index * 100}ms`
+          }}>
                 <CardContent className="p-6 text-center">
                   <div className={`mx-auto mb-4 p-4 rounded-full bg-gradient-cyber/20 w-16 h-16 flex items-center justify-center group-hover:animate-pulse`}>
                     <social.icon className={`${social.color} group-hover:scale-110 transition-transform`} size={24} />
@@ -201,8 +153,7 @@ const ContactSection = () => {
                     {social.handle}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
 
@@ -215,8 +166,6 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
