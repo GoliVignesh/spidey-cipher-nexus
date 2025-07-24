@@ -3,47 +3,47 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 const CertificationsSection = () => {
   const certifications = [{
-    title: 'AWS Certified Developer - Associate',
+    title: 'AWS Certified Cloud Practitioner',
     issuer: 'Amazon Web Services',
+    date: '2025',
+    description: 'Demonstrated cloud fluency and foundational AWS knowledge',
+    credentialUrl: 'https://www.credly.com/badges/94093498-d92b-489d-9d2c-e0edff46ecc7/linked_in_profile',
+    logo: '/lovable-uploads/2ff2d55b-8b7c-4b72-b0ab-87da310872a1.png'
+  }, {
+    title: 'Smart Coder',
+    issuer: 'Smart Interviews',
+    date: '2025',
+    description: 'Mastered core programming concepts, data structures, and problem-solving techniques through hands-on coding practice.',
+    credentialUrl: 'https://smartinterviews.in/certificate/a27838fc',
+    logo: '/lovable-uploads/bbde1973-8bf8-45a9-810a-c230a7fbe877.png'
+  }, {
+    title: 'Foundations of Cyber Security',
+    issuer: 'Google',
     date: '2024',
-    description: 'Demonstrated proficiency in developing and maintaining applications on the AWS platform.',
-    credentialUrl: '#',
-    logo: '☁️'
+    description: 'Recognized core skills and knowledge needed to become a cybersecurity analyst.',
+    credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/M8TK8ZZKUJKK',
+    logo: '/lovable-uploads/b2452f14-3cb3-4a0a-a4ce-b68145c973b8.png'
   }, {
-    title: 'React Developer Certification',
-    issuer: 'Meta',
-    date: '2023',
-    description: 'Advanced React development skills including hooks, context, and performance optimization.',
-    credentialUrl: '#',
-    logo: '⚛️'
+    title: 'Programming in Java',
+    issuer: 'NPTEL',
+    date: '2024',
+    description: 'Gained a strong foundation in object-oriented programming, exception handling, and core Java principles through structured coursework.',
+    credentialUrl: 'https://drive.google.com/file/d/1BbCTTimNiASQvGptqfcHiba3MEenCt5F/view?usp=sharing',
+    logo: '/lovable-uploads/4145eb7d-de58-4c42-9808-19028f7261f2.png'
   }, {
-    title: 'Python for Data Science',
+    title: 'Programming, Data Structures and Algorithms using Python',
+    issuer: 'NPTEL',
+    date: '2024',
+    description: 'Developed a solid grasp of Python programming, algorithmic thinking, and key data structures through rigorous hands-on problem solving.',
+    credentialUrl: 'https://drive.google.com/file/d/1S6D1ZjzxZRgfPTDF33G0iv45DUSYWDoQ/view?usp=sharing',
+    logo: '/lovable-uploads/bf3fd051-1598-4d64-97b7-5d565bc86ef8.png'
+  }, {
+    title: 'Prompt Engineering for Everyone',
     issuer: 'IBM',
-    date: '2023',
-    description: 'Comprehensive training in Python programming for data analysis and machine learning.',
-    credentialUrl: '#',
-    logo: '🐍'
-  }, {
-    title: 'Google Cloud Platform Fundamentals',
-    issuer: 'Google Cloud',
     date: '2024',
-    description: 'Core GCP services and cloud computing fundamentals.',
-    credentialUrl: '#',
-    logo: '☁️'
-  }, {
-    title: 'Cybersecurity Fundamentals',
-    issuer: 'Cisco',
-    date: '2023',
-    description: 'Essential cybersecurity concepts and best practices for secure development.',
-    credentialUrl: '#',
-    logo: '🔒'
-  }, {
-    title: 'Machine Learning Specialization',
-    issuer: 'Stanford University',
-    date: '2024',
-    description: 'Advanced machine learning algorithms and applications.',
-    credentialUrl: '#',
-    logo: '🤖'
+    description: 'Learned the fundamentals of prompt design to effectively interact with AI systems and enhance outcomes using large language models.',
+    credentialUrl: 'https://courses.cognitiveclass.ai/certificates/7b4e2153d1d743dcbec1734a63dabe35',
+    logo: '/lovable-uploads/7cbe6277-23de-4e83-b737-97907e26c282.png'
   }];
   return <section id="certifications" className="py-20 relative overflow-hidden">
       <div className="container mx-auto px-6">
@@ -62,7 +62,9 @@ const CertificationsSection = () => {
         }}>
               <CardHeader className="relative overflow-hidden">
                 <div className="flex items-center gap-4 mb-3">
-                  <div className="text-4xl">{cert.logo}</div>
+                  <div className="w-12 h-12 flex items-center justify-center">
+                    <img src={cert.logo} alt={`${cert.issuer} logo`} className="w-10 h-10 object-contain" />
+                  </div>
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <Calendar size={16} />
                     {cert.date}
