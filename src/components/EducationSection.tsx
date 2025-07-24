@@ -4,11 +4,11 @@ import { Card, CardContent } from '@/components/ui/card';
 const EducationSection = () => {
   const education = [
     {
-      degree: 'Bachelor of Technology - Computer Science',
-      institution: 'Vasavi College of Engineering',
+      degree: 'Bachelor of Technology - Computer Science and Engineering',
+      institution: 'MLR Institute of Technology',
       location: 'Hyderabad, Telangana',
-      duration: '2021 - 2025',
-      result: 'CGPA: 8.7/10',
+      duration: '2022 - 2026',
+      result: 'CGPA: 9.15/10',
       description: 'Specializing in Software Engineering and Data Science. Active member of coding clubs and tech societies.',
       icon: '🎓',
       status: 'current'
@@ -17,18 +17,18 @@ const EducationSection = () => {
       degree: 'Intermediate (XII) - MPC',
       institution: 'Narayana Junior College',
       location: 'Hyderabad, Telangana',
-      duration: '2019 - 2021',
-      result: '96.2%',
+      duration: '2020 - 2022',
+      result: '97.6%',
       description: 'Mathematics, Physics, and Chemistry with a focus on analytical thinking and problem-solving.',
       icon: '📚',
       status: 'completed'
     },
     {
       degree: 'Secondary School (X)',
-      institution: 'Narayana High School',
+      institution: 'Nagarjuna High School',
       location: 'Hyderabad, Telangana',
-      duration: '2018 - 2019',
-      result: '95.8%',
+      duration: '2019 - 2020',
+      result: 'CGPA: 10/10',
       description: 'Strong foundation in sciences and mathematics. First exposure to computer programming.',
       icon: '🏫',
       status: 'completed'
