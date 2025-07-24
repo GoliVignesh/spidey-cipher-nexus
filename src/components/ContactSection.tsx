@@ -95,7 +95,12 @@ const ContactSection = () => {
               <form onSubmit={handleTerminalSubmit} className="flex gap-2">
                 <div className="flex-1 flex items-center bg-cyber-dark rounded-lg px-3">
                   <span className="text-green-400 font-mono mr-2">$</span>
-                  <Input value={terminalInput} onChange={e => setTerminalInput(e.target.value)} placeholder="Type a command..." className="bg-transparent border-none font-mono text-green-400 placeholder:text-green-400/50" />
+                  <Input 
+                    value={terminalInput} 
+                    onChange={e => setTerminalInput(e.target.value)} 
+                    placeholder="Type a command..." 
+                    className="bg-cyber-dark border-0 font-mono text-green-400 placeholder:text-green-400/50 focus-visible:ring-0 focus-visible:ring-offset-0" 
+                  />
                 </div>
                 <Button type="submit" className="bg-gradient-cyber hover:opacity-80">
                   <Send size={16} />
