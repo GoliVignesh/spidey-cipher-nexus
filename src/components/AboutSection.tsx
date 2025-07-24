@@ -72,7 +72,8 @@ const AboutSection = () => {
                 <TabsTrigger 
                   key={tab.id} 
                   value={tab.id}
-                  className="flex items-center gap-2 font-rajdhani font-medium data-[state=active]:bg-gradient-cyber data-[state=active]:text-primary-foreground"
+                  className="flex items-center gap-2 font-rajdhani font-medium data-[state=active]:bg-gradient-cyber data-[state=active]:text-primary-foreground pointer-events-auto cursor-pointer relative z-10"
+                  onClick={() => setActiveTab(tab.id)}
                 >
                   <tab.icon size={20} />
                   <span className="hidden sm:inline">{tab.label}</span>
