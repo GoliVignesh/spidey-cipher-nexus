@@ -20,7 +20,7 @@ const Footer = () => {
           {/* Logo */}
           <div className="mb-6">
             <h3 className="text-2xl font-orbitron font-bold bg-gradient-cyber bg-clip-text text-transparent">Goli Vignesh</h3>
-            <p className="text-muted-foreground font-rajdhani mt-2">It does not matter how slowly you go so long as you do not stop</p>
+            <p className="text-muted-foreground font-rajdhani mt-2">Developer | Problem Solver | Designer</p>
           </div>
 
           {/* Quick Links */}

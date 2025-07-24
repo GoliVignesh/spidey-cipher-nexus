@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 const ContactSection = () => {
   const [terminalInput, setTerminalInput] = useState('');
-  const [terminalHistory, setTerminalHistory] = useState(['> System initialized...', '> Welcome to Spidey\'s Contact Terminal', '> Type "help" for available commands']);
+  const [terminalHistory, setTerminalHistory] = useState(['> System initialized...', '> Welcome to Vignesh\'s Contact Terminal', '> Type "help" for available commands']);
   const socialLinks = [{
     name: 'LinkedIn',
     icon: Linkedin,
@@ -55,7 +55,7 @@ const ContactSection = () => {
         newHistory.push('LinkedIn, GitHub, Instagram - Find all links below!');
         break;
       case 'clear':
-        setTerminalHistory(['> Terminal cleared', '> Welcome back to Spidey\'s Contact Terminal']);
+        setTerminalHistory(['> Terminal cleared', '> Welcome back to Vignesh\'s Contact Terminal']);
         setTerminalInput('');
         return;
       default:
@@ -160,8 +160,8 @@ const ContactSection = () => {
         {/* Fun Easter Egg Section */}
         <div className="mt-16 text-center">
           <div className="inline-block glass cyber-border rounded-lg p-4 neon-glow">
-            <p className="text-sm text-muted-foreground font-rajdhani">
-              🕷️ <span className="text-primary">Pro Tip:</span> Try the terminal commands above for a fun experience!
+             <p className="text-sm text-muted-foreground font-rajdhani">
+              🌟 <span className="text-primary">Pro Tip:</span> Try the terminal commands above for a fun experience!
             </p>
           </div>
         </div>

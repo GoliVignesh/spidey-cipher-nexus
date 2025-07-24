@@ -12,13 +12,12 @@ const AboutSection = () => {
       label: 'My Origin Story',
       icon: User,
       content: {
-        title: 'The Making of Spidey 🕷️',
-        description: 'Every superhero has an origin story, and mine began in the vibrant city of Hyderabad. Growing up surrounded by technology and innovation, I discovered my superpower wasn\'t web-slinging, but web-building! From a curious kid dismantling gadgets to a Computer Science student crafting digital solutions, my journey has been about turning imagination into code.',
+        title: 'My Origin 🌟',
+        description: 'I\'m Goli Vignesh, born and raised in a conservative family in Hyderabad, Telangana. From a young age, I\'ve been instinctively curious, constantly exploring the "why" behind the "what." This innate inquisitiveness often led me to ask a stream of questions, sometimes more than people expected, but always driven by a genuine desire to understand things deeply.',
         highlights: [
-          'Born and raised in Hyderabad, the "Cyberabad" of India',
-          'First computer encounter at age 8 - instant fascination',
-          'Nickname "Spidey" earned for my ability to navigate complex code webs',
-          'Believes in the motto: "With great code comes great responsibility"'
+          'The Inquisitive Mindset: Whether it\'s technology, human behavior, or daily patterns, I\'ve always approached the world with a sense of analytical wonder. I enjoy examining even the smallest of details, often spending time on things others might overlook—not because I have to, but because that\'s how I make sense of the world.',
+          'A Balanced Personality: I identify as an extroverted introvert, someone who can express thoughts and emotions clearly when needed, yet still cherishes quiet moments of solitude to recharge and reflect. This balance allows me to work effectively in collaborative environments while also valuing independent focus time.',
+          'Perfection in Process: I carry a strong sense of responsibility in whatever I take up. As a perfectionist, I believe in doing things right rather than rushing through tasks. While this sometimes means I spend extra time polishing the final 10%, it reflects my commitment to quality, precision, and thoughtfulness in everything I do.'
         ]
       }
     },
@@ -28,13 +27,11 @@ const AboutSection = () => {
       icon: Code,
       content: {
         title: 'From Hello World to Hello Universe 🌌',
-        description: 'My coding journey started with a simple "Hello World" in Python during my first year. What began as curiosity evolved into passion, and passion into expertise. I\'ve since explored multiple programming languages, frameworks, and technologies, always eager to learn and create something amazing.',
+        description: 'My journey into technology began with curiosity and that curiosity never stopped evolving. I\'ve always found the world of tech fascinating, not just for its innovation but for its potential to solve real-world problems. Whether it\'s a breakthrough framework or an emerging cloud service, I\'m drawn to explore and understand it—regardless of whether it aligns directly with my career path.',
         highlights: [
-          'Started with Python - fell in love with clean, readable code',
-          'Explored web development with React, Node.js, and modern frameworks',
-          'Dived into AI/ML, blockchain, and cloud technologies',
-          'Built 20+ projects ranging from web apps to mobile solutions',
-          'Active contributor to open-source projects'
+          'Learning as a Lifestyle: I consider myself a lifelong learner in the truest sense. I\'m constantly upskilling, diving into documentation, courses, videos, and most importantly, building things. For me, learning isn\'t complete until it\'s put into practice.',
+          'Multi-Domain Experience: Over the years, I\'ve cultivated experience across multiple domains, including Web Development (responsive frontends and scalable backends), Android Development using Flutter, Cloud Technologies (AWS), and Core Programming in Java.',
+          'From Curiosity to Craft: Technology, to me, isn\'t just a skill—it\'s an ever-evolving playground. My enthusiasm often leads me to experiment, prototype, and build—sometimes for fun, sometimes for impact, but always with passion.'
         ]
       }
     },
@@ -44,13 +41,11 @@ const AboutSection = () => {
       icon: Heart,
       content: {
         title: 'The Human Behind the Code 🎭',
-        description: 'When I\'m not coding, you\'ll find me exploring the world beyond screens. I believe that great developers are well-rounded individuals who draw inspiration from diverse experiences and hobbies.',
+        description: 'While technology is a big part of who I am, there\'s much more to me beyond lines of code. At heart, I\'m a chill personality with a sharp eye for detail and observation. Whether it\'s understanding people or picking up subtle nuances in conversations, I find joy in slowing down and truly taking things in.',
         highlights: [
-          'Marvel enthusiast (hence the Spidey nickname!)',
-          'Photography - capturing moments and perspectives',
-          'Chess player - strategic thinking translates to better coding',
-          'Music lover - coding with good beats in the background',
-          'Fitness enthusiast - healthy body, healthy mind, healthy code'
+          'A Teacher at Heart: One of the roles I naturally slip into is that of a teacher. Explaining complex concepts in simple, creative ways is something I genuinely enjoy. If I hadn\'t chosen the tech path, I would\'ve probably been in a classroom, turning everyday lessons into experiences.',
+          'A Natural Marketer: I also have a knack for marketing and persuasion. Communicating ideas with clarity and energy is one of my strengths. I believe I could sell a coffee maker to someone who doesn\'t even drink coffee, just by helping them see the value in it.',
+          'The Connector: Beyond the pitch and the presentation, I take pride in my ability to connect with people. I\'m the kind of person who can earn someone\'s trust in just one conversation. Whether it\'s networking at events or mentoring juniors, I thrive on building genuine, lasting relationships.'
         ]
       }
     }

@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown, Mail, Briefcase } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import heroPortrait from '@/assets/hero-portrait.jpg';
+const heroPortrait = '/lovable-uploads/115a5baf-a0b2-4655-87b9-0fe5ed1bd424.png';
 const HeroSection = () => {
   const [text, setText] = useState('');
-  const fullText = "Hi, I'm Vignesh aka Spidey 👋";
+  const fullText = "Hi, I'm Vignesh 👋";
   useEffect(() => {
     let currentIndex = 0;
     const typeWriter = setInterval(() => {
