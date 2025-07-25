@@ -1,72 +1,86 @@
 import { useState } from 'react';
-import { Trophy, Star, Code, Users, Award, Zap } from 'lucide-react';
+import { Trophy, Star, Code, Users, Github, ExternalLink } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 
 const AccomplishmentsSection = () => {
   const [filter, setFilter] = useState('all');
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const accomplishments = [
+    // Hackathons
     {
       id: 1,
-      title: 'Smart City Hackathon Winner',
-      description: 'Developed an AI-powered traffic management system that reduces congestion by 35%.',
+      title: 'Inventron 2K23',
+      description: 'Developed a healthcare assistant that suggests home remedies based on user-provided symptoms.',
       category: 'hackathon',
-      tags: ['AI/ML', 'IoT', 'Python', 'Team Lead'],
+      tags: ['Chatbot', 'Mobile Dev', 'Team Lead'],
       icon: Trophy,
-      year: '2024',
-      achievement: '1st Place'
+      year: '2023',
+      achievement: 'Runner-up'
     },
     {
       id: 2,
-      title: 'Open Source Contributor',
-      description: 'Active contributor to major React libraries with 50+ merged PRs and 1000+ GitHub stars.',
-      category: 'project',
-      tags: ['React', 'Open Source', 'JavaScript'],
-      icon: Code,
-      year: '2023-24',
-      achievement: '50+ PRs'
+      title: 'Zignasa 2K24',
+      description: 'Built a web-based real estate platform enabling seamless interaction between property buyers and sellers.',
+      category: 'hackathon',
+      tags: ['Web Dev', 'Full Stack', 'Python', 'Team Lead'],
+      icon: Trophy,
+      year: '2024',
+      achievement: 'Winner'
     },
+    // Projects
     {
       id: 3,
-      title: 'Google Developer Student Club Lead',
-      description: 'Led a team of 30+ developers, organized 15+ tech events, and mentored 100+ students.',
-      category: 'leadership',
-      tags: ['Leadership', 'Community', 'Events'],
-      icon: Users,
-      year: '2023-24',
-      achievement: 'Team of 30+'
+      title: 'J.A.R.V.I.S Assistant',
+      description: 'Built a personal AI assistant for my laptop using Python during my first year of engineering.',
+      category: 'project',
+      tags: ['Python', 'AI', 'API'],
+      icon: Code,
+      year: '2022-23',
+      githubUrl: 'https://github.com/VigneshGoli/JARVIS-AI-Voice-Assistant'
     },
     {
       id: 4,
-      title: 'Best Innovation Award',
-      description: 'Created a blockchain-based voting system for college elections ensuring transparency.',
-      category: 'award',
-      tags: ['Blockchain', 'Web3', 'Innovation'],
-      icon: Award,
+      title: 'JustVote: Online Election System',
+      description: 'Developed an online election platform enabling secure and transparent voting for organizations and institutions.',
+      category: 'project',
+      tags: ['Web Dev', 'DBMS', 'SE'],
+      icon: Code,
       year: '2024',
-      achievement: 'College Level'
+      githubUrl: 'https://github.com/VigneshGoli/JustVote-Online-Election-System'
     },
     {
       id: 5,
-      title: 'CodeChef 4-Star Coder',
-      description: 'Achieved 4-star rating on CodeChef with consistent performance in competitive programming.',
-      category: 'competitive',
-      tags: ['DSA', 'Competitive Programming', 'Problem Solving'],
-      icon: Star,
-      year: '2023',
-      achievement: '4-Star Rating'
+      title: 'RideMate: Ride Sharing Platform',
+      description: 'Developed a web app to connect drivers offering spare seats with passengers seeking rides.',
+      category: 'project',
+      tags: ['Flutter', 'BaaS', 'UI/UX'],
+      icon: Code,
+      year: '2025',
+      githubUrl: 'https://github.com/VigneshGoli/RideMate-Ride-Sharing-App'
     },
+    // Campus Engagement
     {
       id: 6,
-      title: 'Tech Conference Speaker',
-      description: 'Delivered keynote on "Future of Web Development" at regional tech conference.',
-      category: 'speaking',
-      tags: ['Public Speaking', 'Web Dev', 'Technology'],
-      icon: Zap,
-      year: '2024',
-      achievement: 'Keynote Speaker'
+      title: 'APEX Game Dev Club Vice-President',
+      description: 'Led a team of 30+ E-Sports and Game Dev Enthusiasts and organized Workshops.',
+      category: 'campus',
+      tags: ['Leadership', 'Community', 'Events'],
+      icon: Users,
+      year: '',
+      achievement: 'Vice-President'
+    },
+    {
+      id: 7,
+      title: 'Centre for Innovation and Entrepreneurship',
+      description: 'Actively contributed as a member of the Centre for Innovation and Entrepreneurship (CIE), supporting various initiatives such as hackathons, workshops, and entrepreneurial events.',
+      category: 'campus',
+      tags: ['Innovation', 'Entrepreneurship', 'Community'],
+      icon: Users,
+      year: '',
+      achievement: 'Member'
     }
   ];
 
@@ -74,8 +88,7 @@ const AccomplishmentsSection = () => {
     { id: 'all', label: 'All', count: accomplishments.length },
     { id: 'hackathon', label: 'Hackathons', count: accomplishments.filter(a => a.category === 'hackathon').length },
     { id: 'project', label: 'Projects', count: accomplishments.filter(a => a.category === 'project').length },
-    { id: 'leadership', label: 'Leadership', count: accomplishments.filter(a => a.category === 'leadership').length },
-    { id: 'award', label: 'Awards', count: accomplishments.filter(a => a.category === 'award').length },
+    { id: 'campus', label: 'Campus Engagement', count: accomplishments.filter(a => a.category === 'campus').length },
   ];
 
   const filteredAccomplishments = filter === 'all' 
@@ -123,50 +136,63 @@ const AccomplishmentsSection = () => {
               onMouseLeave={() => setHoveredCard(null)}
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              {/* Flip Card Effect */}
-              <div className={`transition-transform duration-700 ${
-                hoveredCard === accomplishment.id ? 'rotate-y-180' : ''
-              }`}>
-                
-                {/* Front of Card */}
-                <div className="relative">
-                  <CardHeader className="text-center">
-                    <div className="mx-auto mb-4 p-4 rounded-full bg-gradient-cyber/20 w-20 h-20 flex items-center justify-center">
-                      <accomplishment.icon className="text-primary animate-pulse" size={32} />
-                    </div>
-                    <CardTitle className="text-xl font-orbitron font-bold text-foreground">
-                      {accomplishment.title}
-                    </CardTitle>
+              {/* Card Content */}
+              <div className="relative">
+                <CardHeader className="text-center">
+                  <div className="mx-auto mb-4 p-4 rounded-full bg-gradient-cyber/20 w-20 h-20 flex items-center justify-center">
+                    <accomplishment.icon className="text-primary animate-pulse" size={32} />
+                  </div>
+                  <CardTitle className="text-xl font-orbitron font-bold text-foreground">
+                    {accomplishment.title}
+                  </CardTitle>
+                  {accomplishment.year && (
                     <div className="flex items-center justify-center gap-2 text-secondary font-rajdhani font-semibold">
                       <Calendar size={16} />
                       {accomplishment.year}
                     </div>
-                  </CardHeader>
+                  )}
+                </CardHeader>
+                
+                <CardContent className="space-y-4">
+                  <p className="text-muted-foreground text-sm leading-relaxed text-center">
+                    {accomplishment.description}
+                  </p>
                   
-                  <CardContent className="space-y-4">
-                    <p className="text-muted-foreground text-sm leading-relaxed text-center">
-                      {accomplishment.description}
-                    </p>
-                    
+                  {accomplishment.achievement && (
                     <div className="text-center">
                       <Badge className="bg-gradient-cyber text-primary-foreground font-rajdhani font-semibold">
                         {accomplishment.achievement}
                       </Badge>
                     </div>
-                    
-                    <div className="flex flex-wrap gap-2 justify-center">
-                      {accomplishment.tags.map((tag) => (
-                        <Badge 
-                          key={tag}
-                          variant="outline"
-                          className="text-xs border-primary/50 text-muted-foreground"
-                        >
-                          {tag}
-                        </Badge>
-                      ))}
+                  )}
+                  
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    {accomplishment.tags.map((tag) => (
+                      <Badge 
+                        key={tag}
+                        variant="outline"
+                        className="text-xs border-primary/50 text-muted-foreground"
+                      >
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+
+                  {/* GitHub Button for Projects */}
+                  {accomplishment.githubUrl && (
+                    <div className="flex justify-center mt-4">
+                      <a href={accomplishment.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Button className="group/btn bg-transparent border-2 border-primary text-primary hover:bg-gradient-cyber hover:text-primary-foreground hover:border-transparent transition-all duration-300">
+                          <span className="flex items-center gap-2">
+                            <Github size={16} />
+                            GitHub
+                            <ExternalLink size={16} className="group-hover/btn:translate-x-1 transition-transform" />
+                          </span>
+                        </Button>
+                      </a>
                     </div>
-                  </CardContent>
-                </div>
+                  )}
+                </CardContent>
               </div>
               
               {/* Hover glow effect */}

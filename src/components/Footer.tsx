@@ -61,10 +61,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Fun tagline */}
-          <div className="mt-4">
-            <p className="text-xs text-muted-foreground/70 font-rajdhani italic">"It does not matter how slowly you go so long as you do not stop"</p>
-          </div>
         </div>
       </div>
     </footer>;

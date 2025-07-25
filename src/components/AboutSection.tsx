@@ -95,19 +95,29 @@ const AboutSection = () => {
                     </p>
                     
                     <div className="grid gap-4">
-                      <h4 className="text-xl font-rajdhani font-semibold text-primary">
-                        Highlights:
-                      </h4>
-                      <ul className="space-y-3">
-                        {tab.content.highlights.map((highlight, index) => (
-                          <li 
-                            key={index}
-                            className="flex items-start gap-3 text-muted-foreground"
-                          >
-                            <div className="w-2 h-2 bg-gradient-cyber rounded-full mt-2 flex-shrink-0"></div>
-                            <span>{highlight}</span>
-                          </li>
-                        ))}
+                      <ul className="space-y-6">
+                        {tab.content.highlights.map((highlight, index) => {
+                          const colonIndex = highlight.indexOf(':');
+                          const title = colonIndex !== -1 ? highlight.substring(0, colonIndex) : '';
+                          const content = colonIndex !== -1 ? highlight.substring(colonIndex + 1).trim() : highlight;
+                          
+                          return (
+                            <li 
+                              key={index}
+                              className="space-y-2"
+                            >
+                              {title && (
+                                <h4 className="text-xl font-rajdhani font-semibold text-primary">
+                                  {title}:
+                                </h4>
+                              )}
+                              <div className="flex items-start gap-3 text-muted-foreground">
+                                <div className="w-2 h-2 bg-gradient-cyber rounded-full mt-2 flex-shrink-0"></div>
+                                <span>{content}</span>
+                              </div>
+                            </li>
+                          );
+                        })}
                       </ul>
                     </div>
                   </CardContent>
@@ -115,6 +125,15 @@ const AboutSection = () => {
               </TabsContent>
             ))}
           </Tabs>
+        </div>
+        
+        {/* Fun Fact */}
+        <div className="text-center mt-12 animate-fade-in">
+          <div className="inline-block p-4 rounded-lg glass cyber-border">
+            <p className="text-lg font-rajdhani">
+              <span className="text-primary font-semibold">Fun Fact:</span> You might spot me in open-source projects under the alias <em>Spidey</em>
+            </p>
+          </div>
         </div>
       </div>
     </section>

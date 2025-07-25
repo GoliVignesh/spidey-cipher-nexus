@@ -6,14 +6,14 @@ const SkillsSection = () => {
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
   const technicalSkills = [
-    { name: 'JavaScript/TypeScript', level: 90, category: 'Frontend' },
-    { name: 'React/Next.js', level: 85, category: 'Frontend' },
-    { name: 'Python', level: 88, category: 'Backend' },
-    { name: 'Node.js', level: 82, category: 'Backend' },
-    { name: 'SQL/NoSQL', level: 80, category: 'Database' },
-    { name: 'AWS/Cloud', level: 75, category: 'DevOps' },
-    { name: 'Git/GitHub', level: 90, category: 'Tools' },
-    { name: 'Docker', level: 70, category: 'DevOps' },
+    { name: 'Java', level: 90, category: 'Backend' },
+    { name: 'HTML/CSS', level: 85, category: 'Frontend' },
+    { name: 'Git/GitHub', level: 88, category: 'Tools' },
+    { name: 'SQL', level: 82, category: 'Database' },
+    { name: 'AWS Cloud', level: 80, category: 'DevOps' },
+    { name: 'JavaScript', level: 75, category: 'Frontend' },
+    { name: 'Python', level: 90, category: 'Backend' },
+    { name: 'Figma', level: 70, category: 'Design' },
   ];
 
   const softSkills = [
