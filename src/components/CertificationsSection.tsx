@@ -83,13 +83,15 @@ const CertificationsSection = () => {
                   {cert.description}
                 </p>
                 
-                <Button className="w-full group/btn bg-transparent border-2 border-primary text-primary hover:bg-gradient-cyber hover:text-primary-foreground hover:border-transparent transition-all duration-300" onClick={() => window.open(cert.credentialUrl, '_blank')}>
-                  <span className="flex items-center gap-2">
-                    <Award size={16} />
-                    View Credential
-                    <ExternalLink size={16} className="group-hover/btn:translate-x-1 transition-transform" />
-                  </span>
-                </Button>
+                <a href={cert.credentialUrl} target="_blank" rel="noopener noreferrer" className="w-full">
+                  <Button className="w-full group/btn bg-transparent border-2 border-primary text-primary hover:bg-gradient-cyber hover:text-primary-foreground hover:border-transparent transition-all duration-300">
+                    <span className="flex items-center gap-2">
+                      <Award size={16} />
+                      View Credential
+                      <ExternalLink size={16} className="group-hover/btn:translate-x-1 transition-transform" />
+                    </span>
+                  </Button>
+                </a>
               </CardContent>
               
               {/* Hover glow effect */}

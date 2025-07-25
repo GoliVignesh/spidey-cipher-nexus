@@ -16,21 +16,21 @@ const ContactSection = () => {
   }, {
     name: 'GitHub',
     icon: Github,
-    url: 'https://github.com/vignesh-spidey',
+    url: 'https://github.com/VigneshGoli',
     color: 'text-gray-400',
-    handle: '@vignesh-spidey'
+    handle: '@VigneshGoli'
   }, {
     name: 'Instagram',
     icon: Instagram,
-    url: 'https://instagram.com/vignesh_spidey',
+    url: 'https://www.instagram.com/vigneshgoli',
     color: 'text-pink-400',
-    handle: '@vignesh_spidey'
+    handle: '@vigneshgoli'
   }, {
     name: 'Email',
     icon: Mail,
-    url: 'mailto:vignesh.goli@example.com',
+    url: 'mailto:golivignesh@gmail.com',
     color: 'text-green-400',
-    handle: 'vignesh.goli@example.com'
+    handle: 'golivignesh@gmail.com'
   }];
   const handleTerminalSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -49,7 +49,7 @@ const ContactSection = () => {
         newHistory.push('JavaScript, React, Python, Node.js, AWS, Docker, and more...');
         break;
       case 'contact':
-        newHistory.push('Email: vignesh.goli@example.com | Location: Hyderabad, India');
+        newHistory.push('Email: golivignesh@gmail.com | Location: Hyderabad, India');
         break;
       case 'social':
         newHistory.push('LinkedIn, GitHub, Instagram - Find all links below!');

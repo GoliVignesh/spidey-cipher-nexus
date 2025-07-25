@@ -82,12 +82,14 @@ const HeroSection = () => {
               </span>
             </Button>
             
-            <Button onClick={() => scrollToSection('#accomplishments')} className="group relative overflow-hidden bg-gradient-cyber text-primary-foreground font-rajdhani font-semibold px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105">
-              <span className="relative flex items-center gap-2">
-                <Briefcase size={20} />
-                My Works
-              </span>
-            </Button>
+            <a href="https://drive.google.com/file/d/19bkcn_JD9VGdfbHBJiAMFwOzcKrF0UGd/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <Button className="group relative overflow-hidden bg-gradient-cyber text-primary-foreground font-rajdhani font-semibold px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105">
+                <span className="relative flex items-center gap-2">
+                  <Briefcase size={20} />
+                  View Resume
+                </span>
+              </Button>
+            </a>
           </div>
 
           {/* Scroll Indicator */}
